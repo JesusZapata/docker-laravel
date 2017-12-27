@@ -9,4 +9,6 @@ RUN docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2
 RUN pecl install xdebug && \
     docker-php-ext-enable xdebug
 
-RUN curl -sS https://getcomposer.org/installer | php
+RUN curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer  && \
+    composer global require "laravel/installer"

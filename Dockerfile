@@ -1,4 +1,4 @@
-FROM php:7.1
+FROM php:7.0
 MAINTAINER Jesus Zapata <chuchocorleone@gmail.com>
 
 RUN apt-get update -yqq && \

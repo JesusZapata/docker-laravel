@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - npm install -g dockerlint
+
+script:
+  - dockerlint Dockerfile
+  - docker build -t jazapata1/docker-laravel .
